@@ -1,0 +1,145 @@
+============================================================
+FINAL SENSOR FORECASTING PERFORMANCE REPORT
+============================================================
+
+Project: Industrial Sensor Time-Series Forecasting
+Forecast horizon: 60 seconds
+
+FINAL MODEL SELECTION
+------------------------------------------------------------
+vib_x_rms            -> XGBoost
+vib_y_rms            -> XGBoost
+vib_z_rms            -> XGBoost
+mag_x                -> Ridge
+mag_y                -> Ridge
+mag_z                -> Ridge
+temperature          -> Persistence
+
+FINAL WALK-FORWARD PERFORMANCE
+------------------------------------------------------------
+
+Sensor: vib_x_rms
+Model: XGBoost
+MAE: 0.019250
+RMSE: 0.036500
+RMSE Std: 0.031473
+R²: -8.375215
+Forecastability: Poor
+
+Sensor: vib_y_rms
+Model: XGBoost
+MAE: 0.024974
+RMSE: 0.046564
+RMSE Std: 0.038200
+R²: -7.574728
+Forecastability: Poor
+
+Sensor: vib_z_rms
+Model: XGBoost
+MAE: 0.008276
+RMSE: 0.015306
+RMSE Std: 0.011545
+R²: -2.613671
+Forecastability: Poor
+
+Sensor: mag_x
+Model: Ridge
+MAE: 114.777000
+RMSE: 132.499000
+RMSE Std: 0.995781
+R²: -0.002038
+Forecastability: Poor
+
+Sensor: mag_y
+Model: Ridge
+MAE: 114.555000
+RMSE: 132.387000
+RMSE Std: 1.089499
+R²: -0.003333
+Forecastability: Poor
+
+Sensor: mag_z
+Model: Ridge
+MAE: 113.912000
+RMSE: 131.702000
+RMSE Std: 0.559924
+R²: -0.001523
+Forecastability: Poor
+
+Sensor: temperature
+Model: Persistence
+MAE: 0.124780
+RMSE: 0.189486
+RMSE Std: 0.083086
+R²: 0.817088
+Forecastability: Strong
+
+
+MULTI-HORIZON PERFORMANCE
+------------------------------------------------------------
+
+vib_x_rms
+    60 sec R² = -4.257000
+   300 sec R² = -16.272000
+   600 sec R² = -101.171000
+  1800 sec R² = -132.697000
+  3600 sec R² = -64.384000
+
+vib_y_rms
+    60 sec R² = -3.328000
+   300 sec R² = -10.406000
+   600 sec R² = -66.076000
+  1800 sec R² = -78.957000
+  3600 sec R² = -33.191000
+
+vib_z_rms
+    60 sec R² = -1.132000
+   300 sec R² = -5.763000
+   600 sec R² = -25.026000
+  1800 sec R² = -33.614000
+  3600 sec R² = -20.429000
+
+mag_x
+    60 sec R² = -0.004500
+   300 sec R² = -0.002820
+   600 sec R² = -0.001480
+  1800 sec R² = -0.002410
+  3600 sec R² = -0.002920
+
+mag_y
+    60 sec R² = -0.003860
+   300 sec R² = -0.000620
+   600 sec R² = -0.001270
+  1800 sec R² = -0.003590
+  3600 sec R² = -0.011480
+
+mag_z
+    60 sec R² = -0.003580
+   300 sec R² = -0.003860
+   600 sec R² = -0.004130
+  1800 sec R² = -0.004040
+  3600 sec R² = -0.006380
+
+temperature
+    60 sec R² = 0.934887
+   300 sec R² = 0.716699
+   600 sec R² = 0.501596
+  1800 sec R² = -0.120017
+  3600 sec R² = -0.336376
+
+
+FINAL CONCLUSIONS
+------------------------------------------------------------
+
+1. The complete forecasting pipeline is operational.
+2. Temperature is the most forecastable sensor.
+3. Vibration forecasting is affected by distribution shift and unseen operating regimes.
+4. Magnetic channels have very low point-wise predictability.
+5. XGBoost was selected for vibration through walk-forward evaluation.
+6. Ridge was selected for magnetic channels as the most stable relative model.
+7. Persistence was selected for temperature because it generalized best.
+8. The negative R² values for vibration and magnetic channels indicate that their forecasts are not currently useful relative to the evaluation baseline.
+9. The system should therefore be used with sensor-specific confidence rather than assuming equal forecast quality across all sensors.
+
+IMPORTANT:
+Training-set metrics are not used as the final forecasting performance claim. The conclusions above are based on walk-forward/generalization evaluation.

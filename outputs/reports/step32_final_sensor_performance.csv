@@ -1,0 +1,8 @@
+sensor,sensor_group,model,mae,rmse,rmse_std,r2,forecastability
+vib_x_rms,Vibration,XGBoost,0.01925,0.0365,0.031473,-8.375215,Poor
+vib_y_rms,Vibration,XGBoost,0.024974,0.046564,0.0382,-7.574728,Poor
+vib_z_rms,Vibration,XGBoost,0.008276,0.015306,0.011545,-2.613671,Poor
+mag_x,Magnetic,Ridge,114.777,132.499,0.995781,-0.002038,Poor
+mag_y,Magnetic,Ridge,114.555,132.387,1.089499,-0.003333,Poor
+mag_z,Magnetic,Ridge,113.912,131.702,0.559924,-0.001523,Poor
+temperature,Temperature,Persistence,0.12478,0.189486,0.083086,0.817088,Strong

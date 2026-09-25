@@ -1,0 +1,19 @@
+{
+    "input_rows": 59195,
+    "continuous_segments": 2,
+    "major_time_gaps": 1,
+    "regime_transitions": 546,
+    "vibration_score_q25": 0.027596032894976644,
+    "vibration_score_q50": 0.02837619840122365,
+    "vibration_score_q75": 0.0926055644885443,
+    "vibration_score_q90": 0.14969250052004285,
+    "vibration_score_q95": 0.19620099078499964,
+    "strong_upward_shifts": 4750,
+    "strong_downward_shifts": 8977,
+    "regime_distribution": {
+        "Normal": 49.99915533406538,
+        "Low": 25.00042233296731,
+        "Elevated": 14.999577667032687,
+        "High": 10.000844665934624
+    }
+}

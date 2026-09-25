@@ -1,0 +1,16 @@
+{
+    "forecast_horizon_seconds": 60,
+    "number_of_features": 146,
+    "number_of_sensors": 7,
+    "train_fraction": 0.7,
+    "validation_fraction": 0.15,
+    "test_fraction": 0.15,
+    "models": [
+        "Persistence",
+        "RecentMean30",
+        "Ridge",
+        "XGBoost"
+    ],
+    "selection_metric": "Validation RMSE",
+    "test_used_for_selection": false
+}

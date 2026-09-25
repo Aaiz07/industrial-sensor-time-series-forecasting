@@ -1,0 +1,51 @@
+{
+    "data_file": "C:\\Users\\Vision\\Desktop\\Time_series\\outputs\\data\\sensor_data_cleaned.csv",
+    "rows": 59195,
+    "sensors": [
+        "vib_x_rms",
+        "vib_y_rms",
+        "vib_z_rms",
+        "mag_x",
+        "mag_y",
+        "mag_z",
+        "temperature"
+    ],
+    "train_ratio": 0.7,
+    "validation_ratio": 0.15,
+    "test_ratio": 0.15000000000000005,
+    "lookback": 60,
+    "lags": [
+        1,
+        2,
+        3,
+        5,
+        10,
+        20,
+        30,
+        60
+    ],
+    "rolling_windows": [
+        5,
+        15,
+        30,
+        60
+    ],
+    "xgb_estimators": 350,
+    "xgb_max_depth": 5,
+    "xgb_learning_rate": 0.05,
+    "lstm_units": [
+        48,
+        24
+    ],
+    "batch_size": 64,
+    "random_state": 42,
+    "best_models": {
+        "vib_x_rms": "Persistence",
+        "vib_y_rms": "Persistence",
+        "vib_z_rms": "Persistence",
+        "mag_x": "XGBoost_LagRolling",
+        "mag_y": "LSTM",
+        "mag_z": "LSTM",
+        "temperature": "Persistence"
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "forecast_horizons_seconds": {
+        "1min": 60,
+        "5min": 300,
+        "10min": 600,
+        "30min": 1800,
+        "60min": 3600
+    },
+    "lags": [
+        1,
+        2,
+        5,
+        10,
+        30,
+        60
+    ],
+    "rolling_windows": [
+        5,
+        15,
+        30,
+        60
+    ],
+    "feature_count": 107,
+    "selection_rule": "Lowest validation RMSE",
+    "test_used_for_model_selection": false,
+    "target_alignment": "Exact timestamp matching",
+    "leakage_check": "PASS",
+    "input_file": "C:\\Users\\Vision\\Desktop\\Time_series\\outputs\\data\\sensor_data_cleaned.csv"
+}

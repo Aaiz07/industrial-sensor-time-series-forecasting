@@ -1,0 +1,84 @@
+category,check,status,details
+Files,Cleaned sensor data,PASS,C:\Users\Vision\Desktop\Time_series\outputs\data\sensor_data_cleaned.csv
+Files,Future forecasting data,PASS,C:\Users\Vision\Desktop\Time_series\outputs\data\future_features_60s.csv
+Files,Model directory,PASS,C:\Users\Vision\Desktop\Time_series\outputs\models
+Files,Database,PASS,C:\Users\Vision\Desktop\Time_series\outputs\database\forecasting.db
+Sensor Data,Required columns,PASS,All required columns found.
+Sensor Data,Valid timestamps,PASS,Invalid timestamps: 0
+Sensor Data,No duplicate timestamps,PASS,Duplicate timestamps: 0
+Sensor Data,No missing sensor values,PASS,Missing sensor values: 0
+Sensor Data,Sensor columns are numeric,PASS,
+Forecast Data,Future feature file readable,PASS,"Rows: 41,881"
+Forecast Data,All future target columns exist,PASS,All 7 future targets found.
+Forecast Data,All forecast horizons are exactly 60 seconds,PASS,Invalid horizon rows: 0
+Forecast Data,Valid target timestamps,PASS,Invalid target timestamps: 0
+Forecast Data,Expected model feature count,PASS,Found 146 features; expected 146.
+Forecast Data,Future targets excluded from model features,PASS,No future target leakage.
+Forecast Data,No missing model features,PASS,Missing feature values: 0
+Models,vib_x_rms model loads,PASS,step21_final_vib_x_rms.joblib
+Models,vib_x_rms artifact structure,PASS,Dictionary artifact.
+Models,vib_x_rms artifact metadata,PASS,Required metadata present.
+Models,vib_x_rms sensor metadata,PASS,Stored sensor: vib_x_rms
+Models,vib_x_rms model type,PASS,"Expected: XGBoost, Found: XGBoost"
+Models,vib_x_rms horizon,PASS,Horizon: 60 seconds
+Models,vib_x_rms feature schema,PASS,Found 146; expected 146.
+Models,vib_y_rms model loads,PASS,step21_final_vib_y_rms.joblib
+Models,vib_y_rms artifact structure,PASS,Dictionary artifact.
+Models,vib_y_rms artifact metadata,PASS,Required metadata present.
+Models,vib_y_rms sensor metadata,PASS,Stored sensor: vib_y_rms
+Models,vib_y_rms model type,PASS,"Expected: XGBoost, Found: XGBoost"
+Models,vib_y_rms horizon,PASS,Horizon: 60 seconds
+Models,vib_y_rms feature schema,PASS,Found 146; expected 146.
+Models,vib_z_rms model loads,PASS,step21_final_vib_z_rms.joblib
+Models,vib_z_rms artifact structure,PASS,Dictionary artifact.
+Models,vib_z_rms artifact metadata,PASS,Required metadata present.
+Models,vib_z_rms sensor metadata,PASS,Stored sensor: vib_z_rms
+Models,vib_z_rms model type,PASS,"Expected: XGBoost, Found: XGBoost"
+Models,vib_z_rms horizon,PASS,Horizon: 60 seconds
+Models,vib_z_rms feature schema,PASS,Found 146; expected 146.
+Models,mag_x model loads,PASS,step21_final_mag_x.joblib
+Models,mag_x artifact structure,PASS,Dictionary artifact.
+Models,mag_x artifact metadata,PASS,Required metadata present.
+Models,mag_x sensor metadata,PASS,Stored sensor: mag_x
+Models,mag_x model type,PASS,"Expected: Ridge, Found: Ridge"
+Models,mag_x horizon,PASS,Horizon: 60 seconds
+Models,mag_x feature schema,PASS,Found 146; expected 146.
+Models,mag_y model loads,PASS,step21_final_mag_y.joblib
+Models,mag_y artifact structure,PASS,Dictionary artifact.
+Models,mag_y artifact metadata,PASS,Required metadata present.
+Models,mag_y sensor metadata,PASS,Stored sensor: mag_y
+Models,mag_y model type,PASS,"Expected: Ridge, Found: Ridge"
+Models,mag_y horizon,PASS,Horizon: 60 seconds
+Models,mag_y feature schema,PASS,Found 146; expected 146.
+Models,mag_z model loads,PASS,step21_final_mag_z.joblib
+Models,mag_z artifact structure,PASS,Dictionary artifact.
+Models,mag_z artifact metadata,PASS,Required metadata present.
+Models,mag_z sensor metadata,PASS,Stored sensor: mag_z
+Models,mag_z model type,PASS,"Expected: Ridge, Found: Ridge"
+Models,mag_z horizon,PASS,Horizon: 60 seconds
+Models,mag_z feature schema,PASS,Found 146; expected 146.
+Models,temperature model loads,PASS,step21_final_temperature.joblib
+Models,temperature artifact structure,PASS,Dictionary artifact.
+Models,temperature artifact metadata,PASS,Required metadata present.
+Models,temperature sensor metadata,PASS,Stored sensor: temperature
+Models,temperature model type,PASS,"Expected: Persistence, Found: Persistence"
+Models,temperature horizon,PASS,Horizon: 60 seconds
+Models,temperature feature schema,PASS,Found 0; expected 0.
+Database,forecast_predictions table,PASS,
+Database,prediction_monitoring table,PASS,
+Database,Forecast table schema,PASS,Required columns present.
+Database,All 7 sensors have forecasts,PASS,All sensors found.
+Database,Forecast predictions are finite,PASS,Invalid predictions: 0
+Database,Database forecasts use 60-sec horizon,PASS,Invalid horizon records: 0
+Database,No duplicate forecast records,PASS,Duplicate records: 0
+Database,Monitoring table schema,PASS,All required columns present.
+Database,All 7 sensors monitored,PASS,All sensors monitored.
+Database,Monitoring statuses are valid,PASS,All statuses valid.
+Database,No duplicate monitoring records,PASS,Duplicate records: 0
+Integration,Every forecast has monitoring result,PASS,Unmonitored forecasts: 0
+Integration,No orphan monitoring records,PASS,Orphan records: 0
+Monitoring,Magnetic sensors use LOW_CONFIDENCE,PASS,Magnetic predictions are not treated as physical anomalies.
+Monitoring,Vibration threshold logic,PASS,Threshold classification is correct.
+Monitoring,Temperature threshold logic,PASS,Threshold classification is correct.
+Dashboard,Dashboard query executes,PASS,Rows returned: 100
+Dashboard,Dashboard forecasts have monitoring status,PASS,Missing monitoring status: 0

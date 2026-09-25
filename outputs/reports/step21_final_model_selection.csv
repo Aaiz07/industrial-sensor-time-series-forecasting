@@ -1,0 +1,8 @@
+sensor,final_model,forecast_horizon_seconds,reason
+vib_x_rms,XGBoost,60,Selected from Step 20 walk-forward validation
+vib_y_rms,XGBoost,60,Selected from Step 20 walk-forward validation
+vib_z_rms,XGBoost,60,Selected from Step 20 walk-forward validation
+mag_x,Ridge,60,Selected from Step 20 walk-forward validation
+mag_y,Ridge,60,Selected from Step 20 walk-forward validation
+mag_z,Ridge,60,Selected from Step 20 walk-forward validation
+temperature,Persistence,60,Selected from Step 20 walk-forward validation

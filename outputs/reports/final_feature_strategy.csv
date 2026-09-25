@@ -1,0 +1,8 @@
+sensor,feature_strategy,reason,horizon_note
+vib_x_rms,Own lags + cross-axis vibration lags + rolling mean/std + diff + time-of-day,"Short-horizon structure exists; cross-axis information was useful, especially for vib_y.",Use direct multi-step evaluation before claiming long-horizon performance.
+vib_y_rms,Own lags + cross-axis vibration lags + rolling mean/std + diff + time-of-day,"Short-horizon structure exists; cross-axis information was useful, especially for vib_y.",Use direct multi-step evaluation before claiming long-horizon performance.
+vib_z_rms,Own lags + cross-axis vibration lags + rolling mean/std + diff + time-of-day,"Short-horizon structure exists; cross-axis information was useful, especially for vib_y.",Use direct multi-step evaluation before claiming long-horizon performance.
+mag_x,Magnetic lags + rolling level/std + limited cross-sensor context,Magnetic point-level predictability is weak; avoid relying on unstable trend extrapolation.,Use direct multi-step evaluation before claiming long-horizon performance.
+mag_y,Magnetic lags + rolling level/std + limited cross-sensor context,Magnetic point-level predictability is weak; avoid relying on unstable trend extrapolation.,Use direct multi-step evaluation before claiming long-horizon performance.
+mag_z,Magnetic lags + rolling level/std + limited cross-sensor context,Magnetic point-level predictability is weak; avoid relying on unstable trend extrapolation.,Use direct multi-step evaluation before claiming long-horizon performance.
+temperature,Own lags + rolling mean/std + diff + time-of-day,Very strong persistence and high short/medium horizon predictability.,Use direct multi-step evaluation before claiming long-horizon performance.

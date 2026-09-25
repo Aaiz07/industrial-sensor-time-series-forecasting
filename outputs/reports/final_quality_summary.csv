@@ -1,0 +1,9 @@
+metric,value
+rows,59195
+columns,8
+duplicate_timestamps,0
+missing_sensor_values,0
+start_timestamp,2026-06-08 00:00:01
+end_timestamp,2026-06-08 23:59:59
+median_sampling_interval_seconds,1.0
+mean_sampling_interval_seconds,1.4587111043576626

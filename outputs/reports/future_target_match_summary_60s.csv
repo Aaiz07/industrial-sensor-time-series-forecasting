@@ -1,0 +1,6 @@
+metric,value
+input_feature_rows,59135.0
+matched_future_target_rows,41881.0
+unmatched_rows,17254.0
+match_coverage_percent,70.82269383613765
+forecast_horizon_seconds,60.0

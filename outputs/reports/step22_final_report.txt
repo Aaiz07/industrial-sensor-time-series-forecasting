@@ -1,0 +1,114 @@
+============================================================
+TIME-SERIES SENSOR FORECASTING PROJECT
+FINAL ANALYSIS REPORT
+============================================================
+
+Forecast horizon: 60 seconds
+Validation method: 5-fold chronological walk-forward validation
+Final models selected from Step 20
+
+FINAL MODEL SELECTION
+------------------------------------------------------------
+vib_x_rms       -> XGBoost
+vib_y_rms       -> XGBoost
+vib_z_rms       -> XGBoost
+mag_x           -> Ridge
+mag_y           -> Ridge
+mag_z           -> Ridge
+temperature     -> Persistence
+
+WALK-FORWARD PERFORMANCE
+------------------------------------------------------------
+
+Sensor: vib_x_rms
+Model: XGBoost
+Mean MAE: 0.019250
+Mean RMSE: 0.036500
+RMSE std: 0.031473
+Mean R2: -8.375215
+R2 std: 16.493671
+
+Sensor: vib_y_rms
+Model: XGBoost
+Mean MAE: 0.024974
+Mean RMSE: 0.046564
+RMSE std: 0.038200
+Mean R2: -7.574728
+R2 std: 14.764050
+
+Sensor: vib_z_rms
+Model: XGBoost
+Mean MAE: 0.008276
+Mean RMSE: 0.015306
+RMSE std: 0.011545
+Mean R2: -2.613671
+R2 std: 4.212186
+
+Sensor: mag_x
+Model: Ridge
+Mean MAE: 114.776649
+Mean RMSE: 132.498804
+RMSE std: 0.995781
+Mean R2: -0.002038
+R2 std: 0.000727
+
+Sensor: mag_y
+Model: Ridge
+Mean MAE: 114.554688
+Mean RMSE: 132.387281
+RMSE std: 1.089499
+Mean R2: -0.003333
+R2 std: 0.003110
+
+Sensor: mag_z
+Model: Ridge
+Mean MAE: 113.911664
+Mean RMSE: 131.702318
+RMSE std: 0.559924
+Mean R2: -0.001523
+R2 std: 0.001972
+
+Sensor: temperature
+Model: Persistence
+Mean MAE: 0.124780
+Mean RMSE: 0.189486
+RMSE std: 0.083086
+Mean R2: 0.817088
+R2 std: 0.171376
+
+============================================================
+FINAL INTERPRETATION
+============================================================
+
+1. Temperature
+Persistence is the strongest forecasting strategy for temperature at the 60-second horizon.
+
+2. Magnetic sensors
+Ridge provides substantially lower RMSE than persistence, but the walk-forward R2 remains close to zero. Therefore the magnetic channels have limited predictable pointwise variation at this horizon.
+
+3. Vibration sensors
+XGBoost has the lowest average RMSE among the tested strategies, but its walk-forward R2 remains strongly negative. Therefore vibration forecasting should not be described as reliable point prediction under the current data and evaluation setup.
+
+4. Generalization
+The difference between training performance and walk-forward performance demonstrates that temporal distribution shift is a major challenge in this dataset.
+
+5. Model complexity
+Increasing model complexity did not consistently solve the forecasting problem. The persistence baseline remains strong for slow-moving temperature data.
+
+6. Overall conclusion
+The project successfully established a leakage-controlled 60-second forecasting pipeline and evaluated model generalization across multiple chronological windows.
+
+IMPORTANT:
+The Step 21 training metrics must not be presented as unbiased forecasting accuracy. The Step 20 walk-forward results are the primary evidence of generalization.
+
+============================================================
+OUTPUT FILES
+============================================================
+Analysis CSV:
+C:\Users\Vision\Desktop\Time_series\outputs\reports\step22_final_analysis.csv
+Sensor summary:
+C:\Users\Vision\Desktop\Time_series\outputs\reports\step22_sensor_summary.csv
+Walk-forward summary:
+C:\Users\Vision\Desktop\Time_series\outputs\reports\step22_walk_forward_summary.csv
+Plots:
+C:\Users\Vision\Desktop\Time_series\outputs\plots

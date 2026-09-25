@@ -1,0 +1,22 @@
+{
+    "script": "03_forecast_and_evaluate.py",
+    "dataset": "C:\\Users\\Vision\\Desktop\\Time_series\\outputs\\data\\sensor_data_cleaned.csv",
+    "forecast_horizons": {
+        "1min": 60,
+        "5min": 300,
+        "10min": 600
+    },
+    "sensors": [
+        "vib_x_rms",
+        "vib_y_rms",
+        "vib_z_rms",
+        "mag_x",
+        "mag_y",
+        "mag_z",
+        "temperature"
+    ],
+    "feature_count": 107,
+    "train_ratio": 0.7,
+    "validation_ratio": 0.15,
+    "leakage_check": "PASS"
+}

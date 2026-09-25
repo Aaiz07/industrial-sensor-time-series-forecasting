@@ -1,0 +1,17 @@
+{
+    "lookback": 60,
+    "forecast_horizon": 1,
+    "number_of_features": 7,
+    "features": [
+        "vib_x_rms",
+        "vib_y_rms",
+        "vib_z_rms",
+        "mag_x",
+        "mag_y",
+        "mag_z",
+        "temperature"
+    ],
+    "train_samples": 41376,
+    "validation_samples": 8819,
+    "test_samples": 8820
+}

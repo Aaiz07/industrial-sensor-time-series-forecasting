@@ -1,0 +1,8 @@
+sensor,selected_model,validation_rmse
+vib_x_rms,XGBoost,0.08375813308367713
+vib_y_rms,XGBoost,0.10468575285356484
+vib_z_rms,XGBoost,0.03458491716686615
+mag_x,Ridge,132.82104186753344
+mag_y,Ridge,133.53885109195716
+mag_z,Ridge,131.58796546129074
+temperature,Persistence,0.19240865491671022

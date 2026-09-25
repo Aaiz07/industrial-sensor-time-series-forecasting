@@ -1,0 +1,8 @@
+sensor,longest_horizon_with_nonnegative_validation_R2_seconds,longest_horizon_with_nonnegative_validation_R2,best_test_R2,best_test_RMSE,best_model,best_horizon
+vib_x_rms,0,None,-4.257273478322114,0.004902118607957239,Ridge,1min
+vib_y_rms,0,None,-3.328447277179378,0.006314755923509073,Ridge,1min
+vib_z_rms,0,None,-1.1321113437558834,0.0026263421340162662,Persistence,1min
+mag_x,0,None,-0.0014796191560073613,133.56413659867093,Ridge,10min
+mag_y,0,None,-0.000623667411479456,132.42280892995203,Ridge,5min
+mag_z,0,None,-0.003578493803509719,131.73262927154553,Ridge,1min
+temperature,600,10min,0.9348868726190135,0.09818332328647572,Persistence,1min

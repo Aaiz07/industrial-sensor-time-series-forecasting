@@ -1,0 +1,15 @@
+{
+    "total_rows": 59195,
+    "train_rows": 41436,
+    "validation_rows": 8879,
+    "test_rows": 8880,
+    "train_ratio": 0.7,
+    "validation_ratio": 0.15,
+    "test_ratio": 0.15,
+    "train_start": "2026-06-08 00:00:01",
+    "train_end": "2026-06-08 16:56:00",
+    "validation_start": "2026-06-08 16:56:02",
+    "validation_end": "2026-06-08 20:27:59",
+    "test_start": "2026-06-08 20:28:01",
+    "test_end": "2026-06-08 23:59:59"
+}

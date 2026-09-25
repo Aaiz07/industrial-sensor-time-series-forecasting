@@ -1,0 +1,2 @@
+input_rows,output_regular_rows,duplicate_timestamps_removed,observed_rows,interpolated_rows,unfilled_missing_rows,observed_coverage_percent,usable_data_percent,large_gaps_over_2_seconds,target_frequency,max_interpolated_missing_points,segment_count,start_timestamp,end_timestamp
+59195,86399,0,59195,25618,1586,68.51352446208868,98.1643306056783,21,1s,1,22,2026-06-08 00:00:01,2026-06-08 23:59:59

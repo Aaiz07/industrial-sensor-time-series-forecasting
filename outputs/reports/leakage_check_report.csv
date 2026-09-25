@@ -1,0 +1,4 @@
+check,status,details
+Raw current target in feature list,PASS,No raw current sensor columns found.
+Lag-1 features,PASS,0 problematic lag features
+Rolling features,PASS,0 problematic rolling features
